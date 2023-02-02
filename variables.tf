@@ -4,7 +4,7 @@ variable "rgname" {
   description = "this is RG name"
 }
 variable "loc" {
-  default     = "East US"
+  default     = "West US"
   type        = string
   description = "this is RG Location"
 }
