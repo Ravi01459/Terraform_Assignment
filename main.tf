@@ -1,12 +1,12 @@
-resource "azurerm_resource_group" "example" {
+resource "azurerm_resource_group" "example1" {
   name     = var.rgname
   location = var.loc
 }
 
 resource "azurerm_managed_disk" "source" {
   name                 = "TS-DEV-APP-DISK"
-  location             = azurerm_resource_group.example.location
-  resource_group_name  = azurerm_resource_group.example.name
+  location             = azurerm_resource_group.example1.location
+  resource_group_name  = azurerm_resource_group.example1.name
   storage_account_type = "Premium_LRS"
   create_option        = "Empty"
   disk_size_gb         = "100"
